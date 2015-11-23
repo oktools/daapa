@@ -20,6 +20,11 @@ I've downloaded the latest versions of each (5.0.2), and I am currently using on
 The first thing I've noticed is that Flask support is not present in the community edition. When I ran the "Inspect Code" tool, it brought up many things which I think were a function of PyCharm not being aware of Flask.... We'll see better what is going on when I start the Professional trial.
 
 
+# Git'n 'er done
+
+I created a github repository for the project. I configured the server within "Tools/Tasks & Contexts/" and then tried to push it, only to get rejected (but with no reason stated). I went to the command line and tried the same. Also rejected because there was a file in my new github repo that isn't in mine. Huh? Oh, the license. Guess I need to fetch and merge....
+
+Not knowing how this will go, I backed up the project and proceeded. Right-click project, Git, Repository, Fetch; the new file doesn't show up yet in project pane; ...repo/Merge and the license file is now part of my repo.
 
 
 # Issues
