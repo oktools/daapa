@@ -1,4 +1,10 @@
-### Python template
+### My preferred ignores
+priv/
+.idea/
+
+
+
+### Python template (all typical python files, from PyCharm)
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

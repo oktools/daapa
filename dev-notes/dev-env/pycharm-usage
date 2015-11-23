@@ -1,0 +1,46 @@
+I am currently re-evaluating PyCharm, now on version 5. I'm using the Community edition. It looks much better than when I last tried it a few years ago.
+
+
+# Postives
+
+So far, I am most appreciative of the ease in using Git for version control.
+
+The next thing I've noticed is that I can move a file in the project navigation pane while the document is open in the editor, without having to do a Save-as and deletion of original (or close file in editor, move it, and re-open it). Seems trivial, but when I'm developing a project, I like to keep it organized even while the organizational structure is evolving. And frankly, those few extra steps, repeated many times, grow tiresome and are a hindrance to clarity.
+
+
+
+
+
+
+
+# Community Edition vs. Professional
+
+I've downloaded the latest versions of each (5.0.2), and I am currently using only the Community Edition. I'd like to get my basic understanding prior to using the 30-day trial version of the Professional Edition.
+
+The first thing I've noticed is that Flask support is not present in the community edition. When I ran the "Inspect Code" tool, it brought up many things which I think were a function of PyCharm not being aware of Flask.... We'll see better what is going on when I start the Professional trial.
+
+
+
+
+# Issues
+
+IBus 1.5.11 requirement
+
+Running PyCharm 5 on Ubuntu will likely result in warnings and difficulties relating to the processing of keyboard imput. This is a result of IBus, which is necessary for internatioal characters, having a bug prior to version 1.5.11. The latest Ubuntu (Wily), only ships with 1.5.9. Perhaps one could compile their own if they need the character support. I don't, so I'll do the simple thing and export an environment variable.
+
+If this is an issue, PyCharm pops up a warning with a link to the bug tracking page(https://youtrack.jetbrains.com/issue/IDEA-78860). It provides a workaround which is simply an export of an environment variable to be added to one's ~/.profile file.
+
+This works (as does adding it to .bashrc) if you start PyCharm from bash, but not otherwise. I've got the application "locked" to my my taskbar for ease of starting, but that means the environment variable export doesn't happen. I instead added it to /etc/profile for system-wide availability.
+
+'''
+    $ sudo echo "export IBUS_ENABLE_SYNC_MODE=1" >> /etc/default
+'''
+
+This resolved the issue for me fairly quickly (not counting the getting-educated part).
+
+
+
+
+
+
+
